@@ -819,8 +819,9 @@ export default function Index() {
                   {/* Totals */}
                   {(() => {
                     const deliveryPrice = DELIVERY_OPTIONS.find(o => o.id === delivery)?.price ?? 0;
+                    const discountedDelivery = Math.round(deliveryPrice * (1 - discount / 100));
                     const discounted = Math.round(cartTotal * (1 - discount / 100));
-                    const total = discounted + deliveryPrice;
+                    const total = discounted + discountedDelivery;
                     return (
                       <>
                         <div className="flex items-center justify-between mb-2">
@@ -832,13 +833,16 @@ export default function Index() {
                         {discount > 0 && (
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-primary/80 font-sans text-sm">Скидка {discount}%</span>
-                            <span className="text-primary font-sans text-sm">−{Math.round(cartTotal * discount / 100).toLocaleString()} ₽</span>
+                            <span className="text-primary font-sans text-sm">−{Math.round((cartTotal + deliveryPrice) * discount / 100).toLocaleString()} ₽</span>
                           </div>
                         )}
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-muted-foreground font-sans text-sm">Доставка</span>
-                          <span className="text-foreground font-sans text-sm">
-                            {deliveryPrice === 0 ? "Бесплатно" : `${deliveryPrice} ₽`}
+                          <span className="text-foreground font-sans text-sm flex items-center gap-2">
+                            {discount > 0 && deliveryPrice > 0 && (
+                              <span className="line-through text-muted-foreground text-xs">{deliveryPrice} ₽</span>
+                            )}
+                            {discountedDelivery === 0 ? "Бесплатно" : `${discountedDelivery} ₽`}
                           </span>
                         </div>
                         <div className="gold-line mb-4" />
