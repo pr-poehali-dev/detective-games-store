@@ -143,6 +143,32 @@ export default function Index() {
   const [quizDone, setQuizDone] = useState(false);
   const [filterGenre, setFilterGenre] = useState<string>("Все");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [promoCode, setPromoCode] = useState("");
+  const [promoStatus, setPromoStatus] = useState<"idle" | "ok" | "error">("idle");
+  const [discount, setDiscount] = useState(0);
+
+  const PROMO_CODES: Record<string, number> = {
+    "ТАЙНА10": 10,
+    "ДЕТЕКТИВ15": 15,
+    "МРАК20": 20,
+  };
+
+  const applyPromo = () => {
+    const code = promoCode.trim().toUpperCase();
+    if (PROMO_CODES[code]) {
+      setDiscount(PROMO_CODES[code]);
+      setPromoStatus("ok");
+    } else {
+      setDiscount(0);
+      setPromoStatus("error");
+    }
+  };
+
+  const resetPromo = () => {
+    setPromoCode("");
+    setPromoStatus("idle");
+    setDiscount(0);
+  };
 
   const addToCart = (game: (typeof GAMES)[0]) => {
     setCart((prev) => {
@@ -703,9 +729,70 @@ export default function Index() {
                 {/* Summary */}
                 <div className="border border-border/50 rounded-sm p-6 bg-card">
                   <div className="gold-line mb-5" />
+
+                  {/* Promo code */}
+                  <div className="mb-5">
+                    <p className="text-muted-foreground text-xs font-sans uppercase tracking-wider mb-2">Промокод</p>
+                    {promoStatus === "ok" ? (
+                      <div className="flex items-center justify-between border border-primary/50 bg-primary/5 rounded-sm px-4 py-3">
+                        <div className="flex items-center gap-2">
+                          <Icon name="CheckCircle" size={16} className="text-primary" />
+                          <span className="text-primary text-sm font-sans font-medium">{promoCode.toUpperCase()}</span>
+                          <span className="text-primary/70 text-xs font-sans">— скидка {discount}%</span>
+                        </div>
+                        <button onClick={resetPromo} className="text-muted-foreground hover:text-foreground transition-colors">
+                          <Icon name="X" size={14} />
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex gap-2">
+                        <input
+                          type="text"
+                          value={promoCode}
+                          onChange={(e) => { setPromoCode(e.target.value); setPromoStatus("idle"); }}
+                          onKeyDown={(e) => e.key === "Enter" && applyPromo()}
+                          placeholder="Введите промокод"
+                          className={`flex-1 bg-background border rounded-sm px-4 py-2.5 text-sm font-sans outline-none transition-colors placeholder:text-muted-foreground/50 ${
+                            promoStatus === "error"
+                              ? "border-destructive/60 focus:border-destructive"
+                              : "border-border/60 focus:border-primary/60"
+                          }`}
+                        />
+                        <button
+                          onClick={applyPromo}
+                          className="border border-border/60 hover:border-primary/60 text-muted-foreground hover:text-foreground px-4 py-2.5 text-xs font-sans uppercase tracking-wider transition-all rounded-sm whitespace-nowrap"
+                        >
+                          Применить
+                        </button>
+                      </div>
+                    )}
+                    {promoStatus === "error" && (
+                      <p className="text-destructive text-xs font-sans mt-1.5 flex items-center gap-1">
+                        <Icon name="AlertCircle" size={12} />
+                        Промокод не найден
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Totals */}
+                  {discount > 0 && (
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-muted-foreground font-sans text-sm">Сумма</span>
+                      <span className="text-muted-foreground font-sans text-sm line-through">{cartTotal.toLocaleString()} ₽</span>
+                    </div>
+                  )}
+                  {discount > 0 && (
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-primary/80 font-sans text-sm">Скидка {discount}%</span>
+                      <span className="text-primary font-sans text-sm">−{Math.round(cartTotal * discount / 100).toLocaleString()} ₽</span>
+                    </div>
+                  )}
+                  <div className="gold-line mb-4" />
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-muted-foreground font-sans uppercase tracking-wider text-sm">Итого</span>
-                    <span className="font-serif text-3xl text-primary">{cartTotal.toLocaleString()} ₽</span>
+                    <span className="font-serif text-3xl text-primary">
+                      {Math.round(cartTotal * (1 - discount / 100)).toLocaleString()} ₽
+                    </span>
                   </div>
                   <button className="w-full candle-glow bg-primary text-primary-foreground py-4 font-sans text-sm uppercase tracking-widest hover:bg-primary/90 transition-all rounded-sm">
                     Оформить заказ
