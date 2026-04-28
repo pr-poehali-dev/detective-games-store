@@ -342,8 +342,8 @@ export default function Index() {
             >
               {/* Hero background image */}
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-15"
-                style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6d7189d6-247e-4db4-9a9f-c765671aad2b.jpg)` }}
+                className="absolute inset-0 bg-cover bg-center opacity-30"
+                style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/92a95b97-d2cf-46a0-816e-411304490d98.jpg)` }}
               />
               <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/40 to-background" />
 
