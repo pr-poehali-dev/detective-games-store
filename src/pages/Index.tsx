@@ -12,7 +12,7 @@ const GAMES = [
     price: 3490,
     tags: ["атмосферная", "кооператив", "интрига"],
     description: "Расследуйте загадочное убийство в старом поместье. Каждая улика ведёт к новой тайне.",
-    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6d7189d6-247e-4db4-9a9f-c765671aad2b.jpg",
+    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/3e479018-542b-4436-a2b6-69dd9407c9f1.jpg",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const GAMES = [
     price: 2890,
     tags: ["блеф", "стратегия", "напряжение"],
     description: "Шпионский триллер, где каждый игрок скрывает свою роль. Доверяй, но проверяй.",
-    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6d7189d6-247e-4db4-9a9f-c765671aad2b.jpg",
+    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/f70dbd8e-316c-41d0-9c95-85e6ead7d1b1.jpg",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const GAMES = [
     price: 4290,
     tags: ["соло", "хоррор", "нарратив"],
     description: "Погрузитесь в мир древних ужасов. Раскройте тайну, пока рассудок не угас.",
-    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6d7189d6-247e-4db4-9a9f-c765671aad2b.jpg",
+    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/13058333-333a-4383-93aa-46202dc6db29.jpg",
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ const GAMES = [
     price: 1990,
     tags: ["быстрая", "логика", "семейная"],
     description: "Найдите убийцу прежде, чем он исчезнет. Идеально для первых шагов в детективе.",
-    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6d7189d6-247e-4db4-9a9f-c765671aad2b.jpg",
+    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6fc71366-fa5e-4b2d-981d-3cd7bcf5c867.jpg",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const GAMES = [
     price: 3190,
     tags: ["психология", "обман", "нестандартная"],
     description: "Реальность или иллюзия? Каждый ход меняет правила игры.",
-    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6d7189d6-247e-4db4-9a9f-c765671aad2b.jpg",
+    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/c67adbea-18de-47ce-8bca-970b47291acb.jpg",
   },
   {
     id: 6,
@@ -72,7 +72,19 @@ const GAMES = [
     price: 3790,
     tags: ["большая компания", "ролевая", "захватывающая"],
     description: "Город захвачен таинственными похищениями. Команда сыщиков против Мастера Теней.",
-    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6d7189d6-247e-4db4-9a9f-c765671aad2b.jpg",
+    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/e9fab356-bf5f-4e4c-8241-aeeb62d00e40.jpg",
+  },
+  {
+    id: 7,
+    title: "Дело Оливии Грин",
+    genre: "Детектив",
+    players: "2–5",
+    duration: "75–120 мин",
+    difficulty: "Средняя",
+    price: 3290,
+    tags: ["нуар", "интрига", "расследование"],
+    description: "1932 год. Светская львица Оливия Грин найдена мёртвой в своей гримёрной за час до премьеры. Все улыбались ей в лицо — и все желали её смерти. Распутайте клубок зависти, страсти и тайных сговоров, пока следы не простыли.",
+    image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/e28a3967-7d07-4a7c-a47b-74523234c110.jpg",
   },
 ];
 
