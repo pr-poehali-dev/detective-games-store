@@ -12,6 +12,8 @@ const GAMES = [
     price: 3490,
     tags: ["атмосферная", "кооператив", "интрига"],
     description: "Расследуйте загадочное убийство в старом поместье. Каждая улика ведёт к новой тайне.",
+    fullDescription: "Тёмной осенней ночью в поместье Блэквуд был найден мёртвым его хозяин — эксцентричный коллекционер редкостей лорд Эдвард. Все двери заперты изнутри. Все гости остались на ночь. Один из них — убийца.\n\nКаждый игрок получает тайную роль и личный мотив. В ходе расследования вы обыскиваете комнаты, допрашиваете других игроков и анализируете улики. Но будьте осторожны: убийца тоже не сидит сложа руки — он подбрасывает ложные следы и плетёт интриги.\n\nИгра содержит 12 уникальных сценариев с разными составами подозреваемых и орудий убийства. Каждое прохождение — новая история.",
+    contents: ["120 карт улик", "12 сценариев", "6 планшетов игроков", "Карта поместья", "Фишки подозреваемых", "Дневник следователя"],
     image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/3e479018-542b-4436-a2b6-69dd9407c9f1.jpg",
   },
   {
@@ -24,6 +26,8 @@ const GAMES = [
     price: 2890,
     tags: ["блеф", "стратегия", "напряжение"],
     description: "Шпионский триллер, где каждый игрок скрывает свою роль. Доверяй, но проверяй.",
+    fullDescription: "Холодная война в разгаре. Среди вас — двойной агент, работающий на противника. Никто не знает, кому доверять. Каждое слово может стоить жизни.\n\nВ начале игры каждый получает зашифрованное задание: кто-то защищает агентурную сеть, кто-то тихо её разрушает. Игроки обмениваются информацией, голосуют за подозреваемых и разыгрывают карты оперативных действий. Один неверный ход — и миссия провалена.\n\nНапряжение нарастает с каждым раундом: ресурсы иссякают, а предатель становится всё смелее. Успеете вычислить его раньше, чем он уничтожит всё, что вы строили?",
+    contents: ["80 карт заданий", "5 планшетов агентов", "Жетоны оперативных действий", "Карты событий", "Блок протоколов допроса"],
     image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/f70dbd8e-316c-41d0-9c95-85e6ead7d1b1.jpg",
   },
   {
@@ -36,6 +40,8 @@ const GAMES = [
     price: 4290,
     tags: ["соло", "хоррор", "нарратив"],
     description: "Погрузитесь в мир древних ужасов. Раскройте тайну, пока рассудок не угас.",
+    fullDescription: "Город Аркхэм окутан туманом уже третью неделю подряд. Люди пропадают. В подвалах старых домов слышны странные звуки. А в библиотеке университета кто-то вырвал страницы из всех книг по оккультизму.\n\nВы — группа исследователей, которые решились заглянуть за грань разумного. Путешествуйте по улицам города, собирайте артефакты и раскрывайте зловещие ритуалы до того, как Древний Бог окончательно проснётся.\n\nКаждое решение влияет на рассудок персонажа. Чем глубже вы погружаетесь в тайну — тем тоньше нить, удерживающая разум. Игра с нелинейным нарративом: концовка зависит от ваших выборов.",
+    contents: ["200+ карт событий", "4 листа персонажей", "Карта города Аркхэм", "Жетоны рассудка и здоровья", "Карты артефактов", "Книга мифов"],
     image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/13058333-333a-4383-93aa-46202dc6db29.jpg",
   },
   {
@@ -48,6 +54,8 @@ const GAMES = [
     price: 1990,
     tags: ["быстрая", "логика", "семейная"],
     description: "Найдите убийцу прежде, чем он исчезнет. Идеально для первых шагов в детективе.",
+    fullDescription: "Единственный свидетель преступления — старушка Марта — видела убийцу, но не может вспомнить лицо. У вас есть один вечер, чтобы сложить её разрозненные воспоминания в единую картину и назвать имя преступника.\n\nЛёгкая в освоении, но захватывающая игра для всей семьи. Один игрок берёт роль Марты и отвечает на вопросы, остальные — детективы, которые задают наводящие вопросы и выдвигают версии. Кто первым правильно назовёт подозреваемого, место и орудие — тот победил.\n\nОтличный выбор для тех, кто только знакомится с детективными играми или хочет провести вечер в приятной компании.",
+    contents: ["60 карт воспоминаний", "30 карт подозреваемых", "Блокнот следователя", "Карандаши", "Жетоны версий"],
     image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/6fc71366-fa5e-4b2d-981d-3cd7bcf5c867.jpg",
   },
   {
@@ -60,6 +68,8 @@ const GAMES = [
     price: 3190,
     tags: ["психология", "обман", "нестандартная"],
     description: "Реальность или иллюзия? Каждый ход меняет правила игры.",
+    fullDescription: "Правила меняются каждый раунд. То, что было правдой минуту назад — уже ложь. Добро пожаловать в Зеркальный Лабиринт, где ни один игрок не знает полных правил игры.\n\nВ начале каждого раунда карта «Зеркало» переворачивает механику: победители становятся проигравшими, запрещённые действия — обязательными, а молчание вдруг оказывается дороже золота. Игроки вынуждены постоянно перестраивать стратегию и читать намерения соперников.\n\nЭто игра о человеческой психологии: кто быстрее адаптируется, кто поддаётся панике, кто умеет притворяться увереннее, чем есть на самом деле. Два прохождения никогда не будут одинаковыми.",
+    contents: ["90 карт правил", "50 карт зеркал", "5 планшетов игроков", "Жетоны реальности", "Таймер", "Книга парадоксов"],
     image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/c67adbea-18de-47ce-8bca-970b47291acb.jpg",
   },
   {
@@ -72,6 +82,8 @@ const GAMES = [
     price: 3790,
     tags: ["большая компания", "ролевая", "захватывающая"],
     description: "Город захвачен таинственными похищениями. Команда сыщиков против Мастера Теней.",
+    fullDescription: "В городе орудует неуловимый преступник по прозвищу Тень. За три месяца он похитил семерых состоятельных горожан и не оставил ни единой улики. Полиция в тупике. Частное сыскное агентство берётся за дело.\n\nОдин игрок становится Мастером Теней — он управляет злодеем и расставляет ловушки. Остальные — команда сыщиков, которые делятся на роли: аналитик, агент под прикрытием, взломщик, медиум. Каждая роль имеет уникальные способности.\n\nДинамичная игра с элементами ролевой — идеальна для большой компании. Мастер Теней каждый раз выбирает новую стратегию, так что два вечера не похожи один на другой.",
+    contents: ["150 карт событий", "8 листов персонажей", "Карта города", "Фигурки сыщиков", "Экран Мастера Теней", "Дайсы", "Жетоны улик"],
     image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/e9fab356-bf5f-4e4c-8241-aeeb62d00e40.jpg",
   },
   {
@@ -83,7 +95,9 @@ const GAMES = [
     difficulty: "Средняя",
     price: 3290,
     tags: ["нуар", "интрига", "расследование"],
-    description: "1932 год. Светская львица Оливия Грин найдена мёртвой в своей гримёрной за час до премьеры. Все улыбались ей в лицо — и все желали её смерти. Распутайте клубок зависти, страсти и тайных сговоров, пока следы не простыли.",
+    description: "1932 год. Светская львица Оливия Грин найдена мёртвой в своей гримёрной за час до премьеры.",
+    fullDescription: "Нью-Йорк, 1932 год. Блистательная актриса Оливия Грин должна была выйти на сцену в главной роли премьерного спектакля. Вместо этого её нашли мёртвой в гримёрной — с бокалом шампанского в руке и улыбкой на губах. Яд или несчастный случай?\n\nВ театре той ночью было девятнадцать человек. Продюсер, которому она угрожала разорением. Бывший возлюбленный, которого она бросила. Молодая актриса, мечтавшая занять её место. И ещё шестнадцать человек с мотивами, о которых они предпочитают молчать.\n\nИгра выполнена в стиле классического нуара: ч/б иллюстрации, атмосферные карты допросов и система алиби, которую придётся тщательно проверять. Каждый подозреваемый лжёт — вопрос лишь в том, о чём именно.",
+    contents: ["95 карт показаний", "19 карт подозреваемых", "Карта театра", "Досье Оливии Грин", "Блокнот следователя", "Конверт с уликами"],
     image: "https://cdn.poehali.dev/projects/89c83d3b-009a-4bfb-b23d-711c999c6186/files/e28a3967-7d07-4a7c-a47b-74523234c110.jpg",
   },
 ];
@@ -144,6 +158,7 @@ const ABOUT_ITEMS = [
   },
 ];
 
+type Game = (typeof GAMES)[0];
 type CartItem = { id: number; title: string; price: number; qty: number };
 type Section = "home" | "catalog" | "about" | "cart";
 
@@ -155,6 +170,7 @@ export default function Index() {
   const [quizDone, setQuizDone] = useState(false);
   const [filterGenre, setFilterGenre] = useState<string>("Все");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
   const [promoCode, setPromoCode] = useState("");
   const [promoStatus, setPromoStatus] = useState<"idle" | "ok" | "error">("idle");
   const [discount, setDiscount] = useState(0);
@@ -411,14 +427,20 @@ export default function Index() {
                 {GAMES.slice(0, 3).map((game, i) => (
                   <div
                     key={game.id}
-                    className={`card-glow border border-border/60 rounded-sm overflow-hidden bg-card fade-delay-${i + 1}`}
+                    className={`card-glow border border-border/60 rounded-sm overflow-hidden bg-card fade-delay-${i + 1} cursor-pointer group`}
+                    onClick={() => setSelectedGame(game)}
                   >
                     <div className="relative overflow-hidden h-48">
-                      <img src={game.image} alt={game.title} className="w-full h-full object-cover opacity-70 hover:opacity-90 transition-opacity" />
+                      <img src={game.image} alt={game.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                       <span className="absolute top-3 left-3 bg-background/80 backdrop-blur-sm text-primary text-xs px-2 py-1 border border-primary/30 rounded-sm font-sans tracking-wider">
                         {game.genre}
                       </span>
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="bg-background/80 backdrop-blur-sm border border-primary/50 text-primary text-xs font-sans uppercase tracking-widest px-4 py-2 rounded-sm">
+                          Подробнее
+                        </span>
+                      </div>
                     </div>
                     <div className="p-5">
                       <h3 className="font-serif text-xl mb-2">{game.title}</h3>
@@ -426,7 +448,7 @@ export default function Index() {
                       <div className="flex items-center justify-between">
                         <span className="font-serif text-2xl text-primary">{game.price.toLocaleString()} ₽</span>
                         <button
-                          onClick={() => addToCart(game)}
+                          onClick={(e) => { e.stopPropagation(); addToCart(game); }}
                           className="bg-primary text-primary-foreground px-4 py-2 text-xs font-sans uppercase tracking-wider hover:bg-primary/80 transition-colors rounded-sm"
                         >
                           В корзину
@@ -566,10 +588,11 @@ export default function Index() {
               {filteredGames.map((game, i) => (
                 <div
                   key={game.id}
-                  className={`card-glow border border-border/60 rounded-sm overflow-hidden bg-card fade-delay-${Math.min(i + 1, 4)}`}
+                  className={`card-glow border border-border/60 rounded-sm overflow-hidden bg-card fade-delay-${Math.min(i + 1, 4)} cursor-pointer group`}
+                  onClick={() => setSelectedGame(game)}
                 >
                   <div className="relative overflow-hidden h-52">
-                    <img src={game.image} alt={game.title} className="w-full h-full object-cover opacity-65 hover:opacity-85 transition-all duration-500 hover:scale-105" />
+                    <img src={game.image} alt={game.title} className="w-full h-full object-cover opacity-65 group-hover:opacity-85 transition-all duration-500 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                     <div className="absolute top-3 left-3 flex gap-2">
                       <span className="bg-background/80 backdrop-blur-sm text-primary text-xs px-2 py-1 border border-primary/30 rounded-sm font-sans">
@@ -579,6 +602,11 @@ export default function Index() {
                     <div className="absolute top-3 right-3">
                       <span className="bg-background/80 backdrop-blur-sm text-muted-foreground text-xs px-2 py-1 border border-border/40 rounded-sm font-sans">
                         {game.difficulty}
+                      </span>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="bg-background/80 backdrop-blur-sm border border-primary/50 text-primary text-xs font-sans uppercase tracking-widest px-4 py-2 rounded-sm">
+                        Подробнее
                       </span>
                     </div>
                   </div>
@@ -609,7 +637,7 @@ export default function Index() {
                     <div className="flex items-center justify-between">
                       <span className="font-serif text-2xl text-primary">{game.price.toLocaleString()} ₽</span>
                       <button
-                        onClick={() => addToCart(game)}
+                        onClick={(e) => { e.stopPropagation(); addToCart(game); }}
                         className="bg-primary text-primary-foreground px-4 py-2 text-xs font-sans uppercase tracking-wider hover:bg-primary/80 transition-colors rounded-sm"
                       >
                         В корзину
@@ -880,6 +908,105 @@ export default function Index() {
           </div>
         )}
       </main>
+
+      {/* ══════════════════════════════
+          GAME MODAL
+      ══════════════════════════════ */}
+      {selectedGame && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+          onClick={() => setSelectedGame(null)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+
+          {/* Modal */}
+          <div
+            className="relative z-10 bg-card border border-border/60 rounded-sm w-full max-w-2xl max-h-[90vh] overflow-y-auto fade-in-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Image header */}
+            <div className="relative h-56 overflow-hidden">
+              <img
+                src={selectedGame.image}
+                alt={selectedGame.title}
+                className="w-full h-full object-cover opacity-70"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+              <button
+                onClick={() => setSelectedGame(null)}
+                className="absolute top-4 right-4 bg-background/70 backdrop-blur-sm border border-border/60 rounded-sm p-2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Icon name="X" size={18} />
+              </button>
+              <div className="absolute bottom-4 left-6 right-16">
+                <span className="text-primary text-xs font-sans uppercase tracking-widest">{selectedGame.genre}</span>
+                <h2 className="font-serif text-3xl mt-1">{selectedGame.title}</h2>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              {/* Stats row */}
+              <div className="flex flex-wrap gap-4 mb-6 pb-6 border-b border-border/40">
+                <div className="flex items-center gap-2 text-sm">
+                  <Icon name="Users" size={14} className="text-primary" />
+                  <span className="text-muted-foreground font-sans">{selectedGame.players} игроков</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Icon name="Clock" size={14} className="text-primary" />
+                  <span className="text-muted-foreground font-sans">{selectedGame.duration}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Icon name="BarChart2" size={14} className="text-primary" />
+                  <span className="text-muted-foreground font-sans">{selectedGame.difficulty}</span>
+                </div>
+              </div>
+
+              {/* Full description */}
+              <div className="mb-6">
+                {selectedGame.fullDescription.split("\n\n").map((para, i) => (
+                  <p key={i} className="text-foreground/85 text-sm leading-relaxed font-sans mb-4">{para}</p>
+                ))}
+              </div>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {selectedGame.tags.map((t) => (
+                  <span key={t} className="text-xs border border-border/40 text-muted-foreground px-3 py-1 rounded-sm font-sans">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* Contents */}
+              <div className="mb-6 p-4 bg-background/50 border border-border/40 rounded-sm">
+                <p className="text-xs font-sans uppercase tracking-widest text-muted-foreground mb-3">Состав набора</p>
+                <ul className="grid grid-cols-2 gap-1.5">
+                  {selectedGame.contents.map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-xs font-sans text-foreground/80">
+                      <span className="w-1 h-1 rounded-full bg-primary/60 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Price + CTA */}
+              <div className="gold-line mb-5" />
+              <div className="flex items-center justify-between">
+                <span className="font-serif text-4xl text-primary">{selectedGame.price.toLocaleString()} ₽</span>
+                <button
+                  onClick={() => { addToCart(selectedGame); setSelectedGame(null); }}
+                  className="candle-glow bg-primary text-primary-foreground px-8 py-3.5 font-sans text-sm uppercase tracking-widest hover:bg-primary/90 transition-all rounded-sm"
+                >
+                  В корзину
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-border/40 bg-card/30 py-10 px-4 mt-10">
