@@ -146,6 +146,13 @@ export default function Index() {
   const [promoCode, setPromoCode] = useState("");
   const [promoStatus, setPromoStatus] = useState<"idle" | "ok" | "error">("idle");
   const [discount, setDiscount] = useState(0);
+  const [delivery, setDelivery] = useState<"courier" | "post" | "pickup">("courier");
+
+  const DELIVERY_OPTIONS = [
+    { id: "courier" as const, label: "Курьер", price: 350, icon: "Truck", desc: "1–2 дня" },
+    { id: "post" as const, label: "Почта России", price: 190, icon: "Mail", desc: "5–10 дней" },
+    { id: "pickup" as const, label: "Самовывоз", price: 0, icon: "MapPin", desc: "Бесплатно" },
+  ];
 
   const PROMO_CODES: Record<string, number> = {
     "ТАЙНА10": 10,
@@ -731,6 +738,40 @@ export default function Index() {
                 <div className="border border-border/50 rounded-sm p-6 bg-card">
                   <div className="gold-line mb-5" />
 
+                  {/* Delivery */}
+                  <div className="mb-5">
+                    <p className="text-muted-foreground text-xs font-sans uppercase tracking-wider mb-2">Доставка</p>
+                    <div className="flex flex-col gap-2">
+                      {DELIVERY_OPTIONS.map((opt) => (
+                        <button
+                          key={opt.id}
+                          onClick={() => setDelivery(opt.id)}
+                          className={`flex items-center justify-between px-4 py-3 rounded-sm border transition-all text-left ${
+                            delivery === opt.id
+                              ? "border-primary/60 bg-primary/5"
+                              : "border-border/50 hover:border-border"
+                          }`}
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-colors ${
+                              delivery === opt.id ? "border-primary" : "border-muted-foreground/40"
+                            }`}>
+                              {delivery === opt.id && <div className="w-2 h-2 rounded-full bg-primary" />}
+                            </div>
+                            <Icon name={opt.icon} size={14} className={delivery === opt.id ? "text-primary" : "text-muted-foreground"} />
+                            <div>
+                              <span className="text-sm font-sans text-foreground">{opt.label}</span>
+                              <span className="text-xs text-muted-foreground font-sans ml-2">{opt.desc}</span>
+                            </div>
+                          </div>
+                          <span className={`text-sm font-sans ${delivery === opt.id ? "text-primary" : "text-muted-foreground"}`}>
+                            {opt.price === 0 ? "Бесплатно" : `${opt.price} ₽`}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
                   {/* Promo code */}
                   <div className="mb-5">
                     <p className="text-muted-foreground text-xs font-sans uppercase tracking-wider mb-2">Промокод</p>
@@ -776,31 +817,44 @@ export default function Index() {
                   </div>
 
                   {/* Totals */}
-                  {discount > 0 && (
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-muted-foreground font-sans text-sm">Сумма</span>
-                      <span className="text-muted-foreground font-sans text-sm line-through">{cartTotal.toLocaleString()} ₽</span>
-                    </div>
-                  )}
-                  {discount > 0 && (
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-primary/80 font-sans text-sm">Скидка {discount}%</span>
-                      <span className="text-primary font-sans text-sm">−{Math.round(cartTotal * discount / 100).toLocaleString()} ₽</span>
-                    </div>
-                  )}
-                  <div className="gold-line mb-4" />
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-muted-foreground font-sans uppercase tracking-wider text-sm">Итого</span>
-                    <span className="font-serif text-3xl text-primary">
-                      {Math.round(cartTotal * (1 - discount / 100)).toLocaleString()} ₽
-                    </span>
-                  </div>
-                  <button className="w-full candle-glow bg-primary text-primary-foreground py-4 font-sans text-sm uppercase tracking-widest hover:bg-primary/90 transition-all rounded-sm">
-                    Оформить заказ
-                  </button>
-                  <p className="text-muted-foreground text-xs text-center mt-4 font-sans">
-                    Бесплатная доставка от 3 000 ₽
-                  </p>
+                  {(() => {
+                    const deliveryPrice = DELIVERY_OPTIONS.find(o => o.id === delivery)?.price ?? 0;
+                    const discounted = Math.round(cartTotal * (1 - discount / 100));
+                    const total = discounted + deliveryPrice;
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-muted-foreground font-sans text-sm">Товары</span>
+                          <span className={`font-sans text-sm ${discount > 0 ? "line-through text-muted-foreground" : "text-foreground"}`}>
+                            {cartTotal.toLocaleString()} ₽
+                          </span>
+                        </div>
+                        {discount > 0 && (
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-primary/80 font-sans text-sm">Скидка {discount}%</span>
+                            <span className="text-primary font-sans text-sm">−{Math.round(cartTotal * discount / 100).toLocaleString()} ₽</span>
+                          </div>
+                        )}
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-muted-foreground font-sans text-sm">Доставка</span>
+                          <span className="text-foreground font-sans text-sm">
+                            {deliveryPrice === 0 ? "Бесплатно" : `${deliveryPrice} ₽`}
+                          </span>
+                        </div>
+                        <div className="gold-line mb-4" />
+                        <div className="flex items-center justify-between mb-6">
+                          <span className="text-muted-foreground font-sans uppercase tracking-wider text-sm">Итого</span>
+                          <span className="font-serif text-3xl text-primary">{total.toLocaleString()} ₽</span>
+                        </div>
+                        <button className="w-full candle-glow bg-primary text-primary-foreground py-4 font-sans text-sm uppercase tracking-widest hover:bg-primary/90 transition-all rounded-sm">
+                          Оформить заказ
+                        </button>
+                        <p className="text-muted-foreground text-xs text-center mt-4 font-sans">
+                          Самовывоз и заказы от 3 000 ₽ — бесплатно
+                        </p>
+                      </>
+                    );
+                  })()}
                 </div>
               </>
             )}
