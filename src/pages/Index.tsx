@@ -151,6 +151,7 @@ export default function Index() {
     "ТАЙНА10": 10,
     "ДЕТЕКТИВ15": 15,
     "МРАК20": 20,
+    "ТАЙНА МАВРИКА": 100,
   };
 
   const applyPromo = () => {
